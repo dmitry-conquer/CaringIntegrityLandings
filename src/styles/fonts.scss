@@ -1,0 +1,6 @@
+@use "helpers" as *;
+
+@include font-face("Balto", "Balto-Book", 400);
+@include font-face("Balto", "Balto-Medium", 500);
+@include font-face("TiemposHeadline", "TiemposHeadline-Light", 300);
+@include font-face("TiemposText", "TiemposText-Italic", 300);
