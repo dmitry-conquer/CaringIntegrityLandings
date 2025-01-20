@@ -12,6 +12,7 @@ export default defineConfig({
     },
   },
   build: {
+    assetsDir: 'assets',
     modulePreload: false,
     rollupOptions: {
       input: {
@@ -29,9 +30,9 @@ export default defineConfig({
     },
   },
   plugins: [
-    viteJoinMediaQueries(),
     handlebars({
       partialDirectory: resolve(__dirname, "partials"),
     }),
+    viteJoinMediaQueries(),
   ],
 });
