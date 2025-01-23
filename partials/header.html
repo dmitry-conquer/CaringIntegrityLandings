@@ -1,8 +1,61 @@
-<header class="landing-header">
-  <div class="landing-header__container container-base">
-    <div class="landing-header__logo">
+<header class="header" data-js-header>
+  <div class="header__container container-base">
+    <div class="header__logo header-logo">
       <img src="/public/images/logo.svg" width="284" height="120" alt="Logo" />
     </div>
+    <div class="header__overlay" data-js-header-overlay>
+      <div class="header__overlay-inner">
+        <nav class="header__menu">
+          <ul class="header__menu-list">
+            <li class="header__menu-item current-menu-item">
+              <a href="#" class="header__menu-link">Home</a>
+            </li>
+            <li class="header__menu-item menu-item-has-children">
+              <a href="#" class="header__menu-link">Services</a>
+              <ul class="header__menu-sublist">
+                <li class="header__menu-subitem">
+                  <a href="#" class="header__menu-sublink">Service 1</a>
+                </li>
+                <li class="header__menu-subitem">
+                  <a href="#" class="header__menu-sublink">Service 2</a>
+                </li>
+                <li class="header__menu-subitem">
+                  <a href="#" class="header__menu-sublink">Service 2</a>
+                </li>
+              </ul>
+            </li>
+            <li class="header__menu-item">
+              <a href="#" class="header__menu-link">Contact Us</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__mobile-content">
+          <div class="header__mobile-buttons">
+            <a href="#" class="button button_white header__mobile-button">GET CARE</a>
+            <a href="#" class="button header__mobile-button">CALL US</a>
+          </div>
+          <p class="header__mobile-location">7616 Ogontz Ave Philadelphia, PA 19150</p>
+          <div class="header__mobile-socials">
+            <a href="#" title="Facebook" class="header__mobile-socials-link">
+              <img src="/public/images/facebook-white.svg" alt="Facebook" />
+            </a>
+            <a href="#" title="Instagram" class="header__mobile-socials-link">
+              <img src="/public/images/insta-white.svg" alt="Instagram" />
+            </a>
+            <a href="#" title="Linkedin" class="header__mobile-socials-link">
+              <img src="/public/images/in-white.svg" alt="Linkedin" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button
+      class="header__burger burger-button"
+      type="button"
+      aria-label="Toggle menu"
+      title="Toggle menu"
+      data-js-header-trigger-button
+    ></button>
     <a href="tel:2678931250" title="Phone number" aria-label="Phone number" class="header__phone button button_white"
       >267 893 1250</a
     >

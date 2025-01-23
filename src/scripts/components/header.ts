@@ -17,16 +17,19 @@ export class Header {
     this.rootElement = document.querySelector(this.selectors.root);
     this.overlayElement = this.rootElement?.querySelector(this.selectors.overlay) || null;
     this.triggerButtonElement = this.rootElement?.querySelector(this.selectors.triggerButton) || null;
+  }
+
+  public init(): void {
     this.bindEvents();
   }
 
-  onTriggerButtonClick = (): void => {
+  private onTriggerButtonClick = (): void => {
     this.triggerButtonElement?.classList.toggle(this.states.isActive);
     this.overlayElement?.classList.toggle(this.states.isActive);
     document.documentElement.classList.toggle(this.states.isLock);
   };
 
-  bindEvents(): void {
+  private bindEvents(): void {
     this.triggerButtonElement?.addEventListener("click", this.onTriggerButtonClick);
   }
 }

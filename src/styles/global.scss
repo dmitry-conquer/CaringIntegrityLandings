@@ -1,11 +1,16 @@
 @use "helpers" as *;
 @use "vars";
 
+html.is-lock {
+  overflow: hidden;
+}
+
 body {
   font-family: var(--font-family-base);
   font-size: fluid(18, 24);
   color: var(--color-dark);
-  background-color: var(--color-light-100);
+  background: rgb(237, 233, 255);
+  background: linear-gradient(180deg, rgba(237, 233, 255, 1) 0%, rgba(248, 247, 252, 1) 33%);
 }
 
 img {
@@ -19,8 +24,9 @@ h2, .h2,
 h3, .h3 {
   font-family: var(--font-family-accent);
   line-height: 1.2;
-
-  i {
+  font-weight: 700;
+  i,
+  em {
     font-family: var(--font-family-italic);
   }
 }
@@ -33,7 +39,7 @@ h1,
 
 h2,
 .h2 {
-  font-size: fluid(32, 56);
+  font-size: fluid(32, 64);
   text-align: center;
   margin-bottom: fluid(20, 60);
   display: flex;
@@ -51,9 +57,21 @@ h2,
   }
 }
 
+h3,
+.h3 {
+  color: var(--color-accent);
+  font-size: rem(24);
+}
+
 .wrapper {
   overflow: hidden;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  main {
+    flex-grow: 1;
+  }
 }
 
 .container-base {
@@ -73,15 +91,16 @@ h2,
   border: 1px solid var(--color-accent);
   transition: all 0.2s ease;
   display: inline-block;
+  text-align: center;
   @include hover {
     box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0;
     background-color: var(--color-light);
     color: var(--color-accent);
   }
   @include x-small {
-    padding: rem(12) rem(30);
+    padding: rem(16);
+    width: 100%;
   }
-
   &_white {
     background-color: var(--color-light);
     color: var(--color-accent);
@@ -94,8 +113,6 @@ h2,
 
 .section-content {
   flex-grow: 1;
-  display: flex;
-  flex-direction: column;
 
   ul {
     padding-left: rem(35);
@@ -111,9 +128,5 @@ h2,
         margin-bottom: fluid(10, 16);
       }
     }
-  }
-
-  a {
-    align-self: flex-start;
   }
 }
