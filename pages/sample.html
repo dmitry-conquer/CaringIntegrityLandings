@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      {{> header}}
+      <main>
+        <section class="sample-section">
+          <div class="sample-section__container container-base">
+            <h1>Thank you for your message!</h1>
+            <h2>Someone will contact you soon.</h2>
+            <a href="" class="button">Home Page</a>
+          </div>
+        </section>
+      </main>
+      {{> modal}} {{> footer}}
+    </div>
+    <script type="module" src="../src/scripts/main.ts" defer></script>
+  </body>
+</html>
