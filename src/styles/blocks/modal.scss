@@ -1,0 +1,81 @@
+@use "../helpers" as *;
+
+.modal {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(15px);
+  background: var(--color-dark-overlay);
+  z-index: 999;
+  @include hide;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  padding: fluid(0, 50) 0;
+  &.is-open {
+    pointer-events: auto;
+    @include show;
+  }
+  &__body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__inner {
+    width: 100%;
+    max-width: rem(738);
+    max-height: rem(924);
+    height: 100%;
+    overflow: auto;
+    display: inline-block;
+    border-radius: 13px;
+  }
+  &__content {
+    padding: rem(78) fluid(32, 70) rem(30) fluid(32, 70);
+    background-color: var(--color-light-overlay);
+    border-radius: 13px;
+    transition: opacity 0.3s ease;
+    width: 100%;
+    position: relative;
+    @media (max-width: 640px) {
+      padding: 45px 20px 30px 20px;
+    }
+  }
+  &__title {
+    margin-bottom: fluid(16, 35);
+    text-align: center;
+    font-size: fluid(40, 64);
+    color: var(--color-dark);
+    &::after {
+      display: none;
+    }
+  }
+  &__form {
+  }
+  &__close {
+    position: absolute;
+    right: rem(40);
+    top: rem(40);
+    padding: rem(12);
+    margin: rem(-12);
+    @media (any-hover: hover) {
+      &:hover {
+        & svg {
+          color: rgb(179, 0, 0);
+        }
+      }
+    }
+    svg {
+      pointer-events: none;
+      width: rem(35);
+      height: rem(35);
+      color: #626262;
+    }
+    @include small {
+      right: rem(16);
+      top: rem(16);
+    }
+  }
+}

@@ -8,8 +8,187 @@
   <body>
     <div class="wrapper">
       {{> header}}
-      <main></main>
-      {{> footer}}
+      <main>
+        <section class="hero">
+          <div class="hero__container container-base">
+            <div data-aos="fade-up" class="hero__content">
+              <h1>Caring With <em>Integrity Home Care</em></h1>
+              <p>
+                Empowering Independence Philadelphia and surrounding areas, Dignity, and Peace of Mind for Families in
+                Philadelphia with Personalized Home Care Solutions.
+              </p>
+              <button type="button" aria-label="Open popup form" data-micromodal-trigger="form-popup" class="button">
+                get care
+              </button>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="200" class="hero__image">
+              <img src="/public/images/hero.webp" alt="#" />
+            </div>
+            <div data-aos="fade-up" data-aos-delay="200" class="hero__image-mobile">
+              <img src="/public/images/image.webp" alt="#" />
+            </div>
+          </div>
+        </section>
+
+        <section class="cta">
+          <div class="cta__container container-base">
+            <div data-aos="fade-up" class="cta__image">
+              <img src="/public/images/1.webp" alt="#" />
+            </div>
+            <div data-aos="fade-up" data-aos-delay="200" class="cta__content section-content">
+              <h2>About Us</h2>
+              <p>
+                Caring with Integrity Home Care was founded from the owner’s deep passion for helping others and their
+                personal experience with providing care. Growing up, she always found joy in caring for people and
+                supporting those in need. This became even more personal when her father required care and experience
+                that taught her firsthand how vital compassionate, and reliable assistance is for families facing
+                similar challenges. She understands the emotional and physical toll it can take when a loved one is in
+                need, which drives her commitment to providing high-quality, personalized care. 
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="cta cta_reverse">
+          <div class="cta__container container-base">
+            <div data-aos="fade-up" data-aos-delay="200" class="cta__image">
+              <img src="/public/images/2.webp" alt="#" />
+            </div>
+            <div data-aos="fade-up" class="cta__content section-content">
+              <h2>Mission</h2>
+              <p>
+                Caring With Integrity Home Care's mission is to empower clients to maintain their independence and
+                dignity while offering peace of mind to their families. At Caring with Integrity Home Care, we strive to
+                create a supportive environment where every client feels valued, respected and genuinely cared for.
+                This commitment to excellence and personalized attention drives everything we do.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="cta">
+          <div class="cta__container container-base">
+            <div data-aos="fade-up" class="cta__image">
+              <img src="/public/images/3.webp" alt="#" />
+            </div>
+            <div data-aos="fade-up" data-aos-delay="200" class="cta__content section-content">
+              <h2>Private Pay</h2>
+              <p>
+                For individuals seeking personalized and flexible home care solutions in Philadelphia, our Private Pay
+                services provide an excellent option. With no restrictions from insurance plans or eligibility
+                requirements, you have the freedom to design a care plan that fits your unique needs and preferences.
+                Whether you require companionship, assistance with daily activities, or specialized care, our
+                professional caregivers deliver compassionate support tailored to your schedule. Private Pay ensures
+                immediate access to quality care and the ability to adapt services as your circumstances change,
+                providing peace of mind for you and your loved ones.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="simple-cta">
+          <div data-aos="fade-up" class="simple-cta__container container-base">
+            <div class="simple-cta__inner">
+              <p class="simple-cta__text">
+                Whether for yourself or a loved one, our dedicated team is here to ensure comfort, safety, and
+                independence.
+              </p>
+              <a href="#" class="button">call us</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="benefits">
+          <div class="benefits__container container-base">
+            <div data-aos="fade-up" class="benefits__content">
+              <h2>What Makes Us Different</h2>
+              <img src="/public/images/4.webp" alt="" />
+            </div>
+            <div data-js-accordion class="benefits__accordion accordion">
+              <div data-aos="fade-up" data-aos-delay="100" class="accordion__item">
+                <div
+                  data-js-accordion-trigger
+                  role="button"
+                  aria-label="Toggle accordion"
+                  class="accordion__item-header"
+                >
+                  <h3 class="accordion__item-title">Personalized Care</h3>
+                  <span class="circle-button"></span>
+                </div>
+                <div class="accordion__item-conetnt">
+                  <p class="accordion__item-text">
+                    We customize care plans to meet each client's unique needs, preferences, and cultural background. By
+                    prioritizing individual care, we ensure our clients feel respected, valued, and supported every step
+                    of the way.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="testimonials">
+          <div class="testimonials__container container-base">
+            <h2 data-aos="fade-up" class="testimonials__title">Testimonials</h2>
+            <div data-aos="fade-up" data-aos-delay="200" class="testimonials__content">
+              <div id="testimonials-slider" class="testimonials__outer swiper">
+                <div class="testimonials__items swiper-wrapper">
+                  <div class="testimonials__item testimonial swiper-slide">
+                    <img
+                      src="/public/images/stars.svg"
+                      alt="5 star rating"
+                      title="5 star rating"
+                      class="testimonial__rating"
+                    />
+                    <p class="testimonial__text">
+                      Caring with Integrity helped my mom stay at home with dignity. Their team is amazing!
+                    </p>
+                    <p class="testimonial__author">Sarah K.</p>
+                  </div>
+                  <div class="testimonials__item testimonial swiper-slide">
+                    <img
+                      src="/public/images/stars.svg"
+                      alt="5 star rating"
+                      title="5 star rating"
+                      class="testimonial__rating"
+                    />
+                    <p class="testimonial__text">
+                      Rorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum,
+                      ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+                      inceptos himenaeos.
+                    </p>
+                    <p class="testimonial__author">John P.</p>
+                  </div>
+                  <div class="testimonials__item testimonial swiper-slide">
+                    <img
+                      src="/public/images/stars.svg"
+                      alt="5 star rating"
+                      title="5 star rating"
+                      class="testimonial__rating"
+                    />
+                    <p class="testimonial__text">
+                      Rorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum,
+                      ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+                      inceptos himenaeos.
+                    </p>
+                    <p class="testimonial__author">John P.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="testimonials__navigation">
+                <button class="testimonials__prev-button" type="button">
+                  <span class="circle-button"></span>
+                </button>
+                <div class="testimonials__pagination"></div>
+                <button class="testimonials__next-button" type="button">
+                  <span class="circle-button"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      {{> modal}} {{> footer}}
     </div>
     <script type="module" src="../src/scripts/main.ts" defer></script>
   </body>

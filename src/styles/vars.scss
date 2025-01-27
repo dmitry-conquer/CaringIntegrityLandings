@@ -2,10 +2,11 @@
   --color-light: #fff;
   --color-light-100: #f8f7fc;
   --color-accent: #65008f;
-  --color-accent-opacity: #65008f40;
+  --color-accent-opacity: rgba(100, 0, 143, 0.1);
   --color-accent-transparent: rgba(101, 0, 143, 0.97);
+  --color-dark-overlay: rgba(16, 11, 18, 0.5);
+  --color-light-overlay: rgba(255, 255, 255, 0.75);
   --color-dark: #1b0126;
-  --font-family-base: "AktivGrotesk", sans-serif;
-  --font-family-accent: "TiemposHeadline", sans-serif;
-  --font-family-italic: "TiemposText", sans-serif;
+  --font-family-base: "aktiv-grotesk", sans-serif;
+  --font-family-accent: "adobe-caslon-pro", serif;
 }

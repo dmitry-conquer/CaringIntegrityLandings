@@ -1,0 +1,42 @@
+@use "../helpers" as *;
+
+.cta {
+  padding-top: fluid(40, 120);
+  padding-bottom: fluid(40, 100);
+
+  &_reverse {
+    .cta__container {
+      flex-direction: row-reverse;
+      @include medium {
+        flex-direction: column;
+      }
+    }
+    .cta__image {
+      flex-grow: 1;
+    }
+  }
+
+  &__container {
+    display: flex;
+    column-gap: fluid(30, 173);
+    align-items: center;
+    @include medium {
+      align-items: stretch;
+      flex-direction: column;
+      row-gap: rem(36);
+    }
+  }
+
+  &__image {
+    img {
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    flex: 0 1 rem(738);
+    @include medium {
+      flex: 0 1 auto;
+    }
+  }
+}

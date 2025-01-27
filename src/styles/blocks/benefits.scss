@@ -1,0 +1,23 @@
+@use "../helpers" as *;
+
+.benefits {
+  padding: fluid(40, 120) 0;
+  &__container {
+    column-gap: rem(24);
+    row-gap: fluid(20, 40);
+    display: flex;
+    align-items: center;
+    @include medium {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+  &__content {
+  }
+  &__accordion {
+    flex: 0 1 rem(886);
+    @include medium {
+      flex: 0 1 auto;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+@use "../helpers" as *;
+
+.hero {
+  padding: rem(20) 0 fluid(40, 80) 0;
+  &__container {
+    display: flex;
+    align-items: center;
+    column-gap: fluid(30, 113);
+    @include medium {
+      flex-direction: column-reverse;
+      row-gap: rem(40);
+      align-items: stretch;
+    }
+  }
+  &__content {
+    flex: 0 1 rem(883);
+    @include medium {
+      flex: 0 1 auto;
+    }
+    h1 {
+      margin-bottom: rem(24);
+    }
+    p {
+      font-size: fluid(24, 32);
+      margin-bottom: rem(36);
+    }
+  }
+  &__image {
+    @include medium {
+      display: none;
+    }
+  }
+  &__image-mobile {
+    display: none;
+    @include medium {
+      display: block;
+    }
+  }
+}

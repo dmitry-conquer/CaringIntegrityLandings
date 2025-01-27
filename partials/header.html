@@ -5,8 +5,22 @@
     </div>
     <div class="header__overlay" data-js-header-overlay>
       <div class="header__overlay-inner">
-        <nav class="header__menu">
+        <nav class="header__menu header__menu_desk">
           <ul class="header__menu-list">
+            <li class="header__menu-item menu-item-has-children">
+              <a href="#" class="header__menu-link">Services</a>
+              <ul class="header__menu-sublist">
+                <li class="header__menu-subitem">
+                  <a href="#" class="header__menu-sublink">Service 1</a>
+                </li>
+                <li class="header__menu-subitem">
+                  <a href="#" class="header__menu-sublink">Service 2</a>
+                </li>
+                <li class="header__menu-subitem">
+                  <a href="#" class="header__menu-sublink">Service 2</a>
+                </li>
+              </ul>
+            </li>
             <li class="header__menu-item current-menu-item">
               <a href="#" class="header__menu-link">Home</a>
             </li>
@@ -30,6 +44,22 @@
           </ul>
         </nav>
         <div class="header__mobile-content">
+          <nav class="header__menu header__menu_mobile">
+            <ul class="header__menu-list">
+              <li class="header__menu-item current-menu-item">
+                <a href="#" class="header__menu-link">Home</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-link">Private Pay</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-link">Home Care</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-link">Contact Us</a>
+              </li>
+            </ul>
+          </nav>
           <div class="header__mobile-buttons">
             <a href="#" class="button button_white header__mobile-button">GET CARE</a>
             <a href="#" class="button header__mobile-button">CALL US</a>
@@ -56,8 +86,8 @@
       title="Toggle menu"
       data-js-header-trigger-button
     ></button>
-    <a href="tel:2678931250" title="Phone number" aria-label="Phone number" class="header__phone button button_white"
-      >267 893 1250</a
+    <a href="tel:2678931250" title="Phone number" aria-label="Phone number" class="header__phone header__phone_no-land button button_white"
+      >(267) 893 1250</a
     >
   </div>
 </header>

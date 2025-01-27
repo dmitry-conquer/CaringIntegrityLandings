@@ -1,10 +1,3 @@
 @use "helpers" as *;
-
-@include font-face("Balto", "Balto-Book", 400);
-@include font-face("Balto", "Balto-Medium", 500);
-@include font-face("AktivGrotesk", "AktivGrotesk-Thin", 300);
-@include font-face("AktivGrotesk", "AktivGrotesk-Regular", 400);
-@include font-face("AktivGrotesk", "AktivGrotesk-Medium", 500);
-@include font-face("AktivGrotesk", "AktivGrotesk-Bold", 700);
-@include font-face("TiemposHeadline", "TiemposHeadline-Light", 300);
-@include font-face("TiemposText", "TiemposText-Italic", 300);
+@import url("https://use.typekit.net/tsn0qkj.css");
+@import url("https://use.typekit.net/ong4qjp.css");

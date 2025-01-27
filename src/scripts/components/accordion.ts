@@ -1,35 +1,43 @@
-type AccordionOptions = {
-  triggerClass: string;
-  toggleClass: string;
-};
-
-export class Accordion {
-  private accordionTriggers: NodeListOf<HTMLElement>;
-  private defaults: AccordionOptions;
-  private settings: AccordionOptions;
-  constructor(options?: Partial<AccordionOptions>) {
-    this.defaults = {
-      triggerClass: "accordion-header",
-      toggleClass: "accordion-active",
-    };
-    this.settings = { ...this.defaults, ...options };
-    this.accordionTriggers = document.querySelectorAll(`.${this.settings.triggerClass}`);
+class Accordion {
+  private readonly selectors: Record<string, string> = {
+    root: "[data-js-accordion]",
+    trigger: "[data-js-accordion-trigger]",
+  };
+  private readonly states: Record<string, string> = {
+    isActive: "is-active",
+  };
+  private rootElement: HTMLElement | null;
+  private accordionTriggers: Element[] = [];
+  constructor() {
+    this.rootElement = document.querySelector(this.selectors.root);
+    if (this.rootElement) {
+      this.accordionTriggers = [...this.rootElement.querySelectorAll(this.selectors.trigger)];
+    }
   }
   public init() {
     if (this.accordionTriggers.length <= 0) {
       return;
     }
-    this.initListeners();
+    this.bindEvents();
   }
-  private initListeners() {
+  private bindEvents() {
     this.accordionTriggers.forEach(el => {
-      el?.addEventListener("click", () => this.handleToggle(el.nextElementSibling as HTMLElement, el as HTMLElement));
+      el?.addEventListener("click", () =>
+        this.onAccordionTriggerClick(el.nextElementSibling as HTMLElement, el as HTMLElement)
+      );
     });
   }
-  private handleToggle(content: HTMLElement, trigger: HTMLElement) {
-    requestAnimationFrame(() => {
-      content.style.maxHeight = content.style.maxHeight === "" ? `${content.scrollHeight}px` : "";
+  private onAccordionTriggerClick(content: HTMLElement, trigger: HTMLElement) {
+    this.accordionTriggers.forEach(el => {
+      if (el !== trigger) {
+        const currentContent = el.nextElementSibling as HTMLElement;
+        currentContent.style.maxHeight = "";
+        el.classList.remove(this.states.isActive);
+      }
     });
-    trigger.classList.toggle(this.settings.toggleClass);
+    content.style.maxHeight = content.style.maxHeight === "" ? `${content.scrollHeight}px` : "";
+    trigger.classList.toggle(this.states.isActive);
   }
 }
+
+export default Accordion;

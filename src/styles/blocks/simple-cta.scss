@@ -1,0 +1,32 @@
+@use "../helpers" as *;
+
+.simple-cta {
+  &__inner {
+    border-radius: 16px;
+    background-color: var(--color-accent-opacity);
+    padding: rem(40) fluid(24, 60);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: rem(40);
+    @include medium {
+      flex-direction: column;
+      row-gap: rem(36);
+    }
+  }
+  &__text {
+    flex: 0 1 rem(1042);
+    text-align: center;
+    font-size: fluid(24, 32);
+    @include medium {
+      flex: 0 1 auto;
+    }
+  }
+  a.button {
+    max-width: rem(284);
+    width: 100%;
+    @include x-small {
+      max-width: 100%;
+    }
+  }
+}
