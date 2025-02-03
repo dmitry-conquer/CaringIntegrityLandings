@@ -1,14 +1,11 @@
 export function clickOutside(): void {
-  const selectors = [".menu-item-has-children"];
+  const selectors = [".menu-item-has-children > a"];
 
-  document.body.addEventListener("click", e => {
-    const target = e.target as Element;
+  document.addEventListener("click", () => {
     selectors.forEach(selector => {
-      if (!target?.closest(selector)) {
-        document.querySelectorAll(selector).forEach(el => {
-          el?.classList.remove("is-active");
-        });
-      }
+      document.querySelectorAll(selector).forEach(el => {
+        el.classList.remove("is-active");
+      });
     });
   });
 }
