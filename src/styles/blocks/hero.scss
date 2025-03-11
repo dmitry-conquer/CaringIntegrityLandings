@@ -2,8 +2,9 @@
 
 .hero {
   padding: rem(20) 0 fluid(40, 80) 0;
-  background-position: top center;
+  background-position: bottom center;
   background-repeat: no-repeat;
+  background-size: cover;
   @include medium {
     background-image: none !important;
     position: relative;
@@ -22,6 +23,7 @@
   }
   &_bg {
     padding-top: fluid(170, 270);
+    padding-bottom: 0;
     .hero__content {
       color: var(--color-light);
       h1 {

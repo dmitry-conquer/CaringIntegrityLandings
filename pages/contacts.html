@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.css" />
+    <title>Contacts Page</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      {{> header-absolute}}
+      <main>
+        <section class="hero hero_bg" style="background-image: url(&quot;/public/images/hero-shape.svg&quot;)">
+          <div class="hero__container container-base">
+            <div data-aos="fade-up" class="hero__content">
+              <h1>Get in <em>Touch with Us</em></h1>
+              <p>
+                We’re here to help you and your loved ones every step of the way. Whether you have questions about our
+                services, need assistance with care options, or simply want to learn more, we’re just a call or message
+                away. At Caring with Integrity Home Care, your family’s well-being is our top priority. Reach out to us
+                today, and let’s discuss how we can provide the compassionate care you deserve.
+              </p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="200" class="hero__image">
+              <img src="/public/images/hero-circle.webp" alt="#" />
+            </div>
+            <div data-aos="fade-up" data-aos-delay="200" class="hero__image-mobile">
+              <img src="/public/images/hero-circle.webp" alt="#" />
+            </div>
+          </div>
+        </section>
+
+        <section class="contacts">
+          <div class="contacts__container container-base">
+            <div class="contacts__address">
+              <h2 class="contacts__address-title">Our Address</h2>
+              <div class="contacts__address-info">
+                <p>7616 Ogontz Ave, Philadelphia, PA 19150</p>
+                <a href="#">(267) 893-1250</a>
+              </div>
+              <div class="contacts__address-map">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3053.2221450135107!2d-75.16027762359182!3d40.07045667664129!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4dec555cf7b825f7%3A0x87f082bd02e4d4a3!2sCaring%20With%20Integrity%20Home%20Care!5e0!3m2!1sen!2sus!4v1741698428223!5m2!1sen!2sus"
+                  width="100%"
+                  height="100%"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </div>
+            <div class="contacts__form">
+              <h2 class="contacts__form-title">Get in Touch</h2>
+              <div class="contacts__form-body">
+                <script type="text/javascript" src="https://form.jotform.com/jsform/250694066297164"></script>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      {{> modal}} {{> footer-bg}}
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.js"></script>
+    <script type="module" src="../src/scripts/main.ts" defer></script>
+  </body>
+</html>
