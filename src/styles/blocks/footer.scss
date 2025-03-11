@@ -1,6 +1,56 @@
 @use "../helpers" as *;
 
 .footer {
+  position: relative;
+  &__underlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    object-fit: cover;
+    @include small {
+      display: none;
+    }
+    &_mobile {
+      display: none;
+      @include small {
+        display: block;
+      }
+    }
+  }
+  &_bg {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: fluid(0, 171) 0 fluid(0, 20);
+
+    .footer__body {
+      display: flex;
+      flex-direction: column;
+      &::after {
+        display: none;
+      }
+    }
+    .footer__menus {
+      flex: 0 1 auto;
+      justify-content: flex-start;
+      column-gap: fluid(0, 80);
+    }
+    .footer__column {
+      color: var(--color-light);
+      h3 {
+        color: var(--color-green);
+      }
+    }
+    .footer__bottom-copyright {
+      color: var(--color-light);
+      text-align: left;
+      &::after {
+        display: none;
+      }
+    }
+  }
+
   &__body {
     display: flex;
     justify-content: space-between;
@@ -105,8 +155,10 @@
     }
 
     a {
+      text-decoration: underline;
+      transition: opacity 0.3s ease;
       @include hover {
-        text-decoration: underline;
+        opacity: 0.8;
       }
     }
   }
