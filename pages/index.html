@@ -3,13 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.css" />
     <title>Home Page</title>
   </head>
   <body>
     <div class="wrapper">
-      {{> header}}
+      {{> header-absolute}}
       <main>
-        <section class="hero">
+        <section class="hero hero_bg" style="background-image: url(&quot;/public/images/hero-shape.svg&quot;)">
           <div class="hero__container container-base">
             <div data-aos="fade-up" class="hero__content">
               <h1>Caring With <em>Integrity Home Care</em></h1>
@@ -22,10 +23,85 @@
               </button>
             </div>
             <div data-aos="fade-up" data-aos-delay="200" class="hero__image">
-              <img src="/public/images/hero.webp" alt="#" />
+              <img src="/public/images/hero-circle.webp" alt="#" />
             </div>
             <div data-aos="fade-up" data-aos-delay="200" class="hero__image-mobile">
-              <img src="/public/images/image.webp" alt="#" />
+              <img src="/public/images/hero-circle.webp" alt="#" />
+            </div>
+          </div>
+        </section>
+
+        <section class="services-slider">
+          <div class="services-slider__container container-base">
+            <h2>Services We Offer</h2>
+            <div id="services-slider" class="services-slider__slider swiper">
+              <div class="services-slider__wrapper swiper-wrapper">
+                <div class="services-slider__slide swiper-slide services-slide">
+                  <div class="services-slide__image">
+                    <img src="/public/images/circle-image1.webp" alt="" />
+                  </div>
+                  <h3 class="services-slide__title">Companionship and Home Helper</h3>
+                  <a href="#" class="services-slide__link">learn more</a>
+                </div>
+                <div class="services-slider__slide swiper-slide services-slide">
+                  <div class="services-slide__image">
+                    <img src="/public/images/circle-image2.webp" alt="" />
+                  </div>
+                  <h3 class="services-slide__title">Companionship and Home Helper</h3>
+                  <a href="#" class="services-slide__link">learn more</a>
+                </div>
+                <div class="services-slider__slide swiper-slide services-slide">
+                  <div class="services-slide__image">
+                    <img src="/public/images/circle-image3.webp" alt="" />
+                  </div>
+                  <h3 class="services-slide__title">Monitoring, Encouraging, and Motivating Engagement</h3>
+                  <a href="#" class="services-slide__link">learn more</a>
+                </div>
+                <div class="services-slider__slide swiper-slide services-slide">
+                  <div class="services-slide__image">
+                    <img src="/public/images/circle-image4.webp" alt="" />
+                  </div>
+                  <h3 class="services-slide__title">Companionship and Home Helper</h3>
+                  <a href="#" class="services-slide__link">learn more</a>
+                </div>
+                <div class="services-slider__slide swiper-slide services-slide">
+                  <div class="services-slide__image">
+                    <img src="/public/images/circle-image1.webp" alt="" />
+                  </div>
+                  <h3 class="services-slide__title">Companionship and Home Helper</h3>
+                  <a href="#" class="services-slide__link">learn more</a>
+                </div>
+                <div class="services-slider__slide swiper-slide services-slide">
+                  <div class="services-slide__image">
+                    <img src="/public/images/circle-image2.webp" alt="" />
+                  </div>
+                  <h3 class="services-slide__title">Companionship and Home Helper</h3>
+                  <a href="#" class="services-slide__link">learn more</a>
+                </div>
+                <div class="services-slider__slide swiper-slide services-slide">
+                  <div class="services-slide__image">
+                    <img src="/public/images/circle-image3.webp" alt="" />
+                  </div>
+                  <h3 class="services-slide__title">Companionship and Home Helper</h3>
+                  <a href="#" class="services-slide__link">learn more</a>
+                </div>
+                <div class="services-slider__slide swiper-slide services-slide">
+                  <div class="services-slide__image">
+                    <img src="/public/images/circle-image4.webp" alt="" />
+                  </div>
+                  <h3 class="services-slide__title">Companionship and Home Helper</h3>
+                  <a href="#" class="services-slide__link">learn more</a>
+                </div>
+              </div>
+              <div class="services-slider__navigation slider-navigation">
+                <button class="services-slider__prev-button slider-navigation-prev" type="button">
+                  <span class="circle-button"></span>
+                </button>
+                <div class="services-slider__pagination pagination"></div>
+                <button class="services-slider__next-button slider-navigation-next" type="button">
+                  <span class="circle-button"></span>
+                </button>
+              </div>
             </div>
           </div>
         </section>
@@ -93,7 +169,7 @@
                 Whether for yourself or a loved one, our dedicated team is here to ensure comfort, safety, and
                 independence.
               </p>
-              <a href="#" class="button">call us</a>
+              <a href="#" class="button button_white">call us</a>
             </div>
           </div>
         </section>
@@ -175,12 +251,12 @@
                   </div>
                 </div>
               </div>
-              <div class="testimonials__navigation">
-                <button class="testimonials__prev-button" type="button">
+              <div class="testimonials__navigation slider-navigation">
+                <button class="testimonials__prev-button slider-navigation-prev" type="button">
                   <span class="circle-button"></span>
                 </button>
-                <div class="testimonials__pagination"></div>
-                <button class="testimonials__next-button" type="button">
+                <div class="testimonials__pagination pagination"></div>
+                <button class="testimonials__next-button slider-navigation-next" type="button">
                   <span class="circle-button"></span>
                 </button>
               </div>
@@ -190,6 +266,7 @@
       </main>
       {{> modal}} {{> footer}}
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.js"></script>
     <script type="module" src="../src/scripts/main.ts" defer></script>
   </body>
 </html>

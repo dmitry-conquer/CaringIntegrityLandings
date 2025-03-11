@@ -2,12 +2,48 @@
 
 .hero {
   padding: rem(20) 0 fluid(40, 80) 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  @include medium {
+    background-image: none !important;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: rem(-136);
+      left: 0;
+      background-color: var(--color-accent);
+      border-bottom-right-radius: rem(90);
+      border-bottom-left-radius: rem(90);
+      z-index: -1;
+    }
+  }
+  &_bg {
+    padding-top: fluid(170, 270);
+    .hero__content {
+      color: var(--color-light);
+      h1 {
+        color: var(--color-light);
+      }
+    }
+    button {
+      background-color: var(--color-green);
+      color: var(--color-dark);
+      border: 1px solid var(--color-accent);
+      outline-width: 2px;
+      outline-color: var(--color-light);
+      outline-style: solid;
+      outline-offset: rem(2);
+    }
+  }
   &__container {
     display: flex;
-    align-items: center;
-    column-gap: fluid(30, 113);
+    column-gap: fluid(30, 227);
     @include medium {
-      flex-direction: column-reverse;
+      flex-direction: column;
       row-gap: rem(40);
       align-items: stretch;
     }
@@ -33,6 +69,8 @@
   &__image-mobile {
     display: none;
     @include medium {
+      max-width: rem(560);
+      margin: 0 auto;
       display: block;
     }
   }

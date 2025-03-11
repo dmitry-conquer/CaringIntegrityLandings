@@ -17,10 +17,6 @@
 @use "./blocks/accordion.scss";
 @use "./blocks/modal.scss";
 @use "./blocks/sample.scss";
+@use "./blocks/services-slider.scss";
 
 @import '/node_modules/aos/dist/aos.css';
-
-@import "/node_modules/swiper/swiper.scss";
-@import "/node_modules/swiper/modules/navigation/navigation.scss";
-@import "/node_modules/swiper/modules/pagination/pagination.scss";
-@import "/node_modules/swiper/modules/a11y/a11y.scss";

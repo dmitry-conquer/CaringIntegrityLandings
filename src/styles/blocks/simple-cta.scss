@@ -3,7 +3,7 @@
 .simple-cta {
   &__inner {
     border-radius: 16px;
-    background-color: var(--color-accent-opacity);
+    background-color: var(--color-accent);
     padding: rem(40) fluid(24, 60);
     display: flex;
     align-items: center;
@@ -15,6 +15,7 @@
     }
   }
   &__text {
+    color: var(--color-light);
     flex: 0 1 rem(1042);
     text-align: center;
     font-size: fluid(24, 32);
