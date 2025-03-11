@@ -2,8 +2,7 @@
 
 .hero {
   padding: rem(20) 0 fluid(40, 80) 0;
-  background-position: center;
-  background-size: cover;
+  background-position: top center;
   background-repeat: no-repeat;
   @include medium {
     background-image: none !important;

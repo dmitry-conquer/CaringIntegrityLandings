@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.css" />
+    <title>Services Page</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      {{> header-absolute}}
+      <main>
+        <section class="hero hero_bg" style="background-image: url(&quot;/public/images/hero-shape.svg&quot;)">
+          <div class="hero__container container-base">
+            <div data-aos="fade-up" class="hero__content">
+              <h1>Our <em>Services</em></h1>
+              <p>
+                At Caring with Integrity Home Care, we are dedicated to providing personalized, compassionate care to
+                meet the unique needs of every individual. Our comprehensive range of services is designed to support
+                daily living, enhance well-being, and promote independence.
+              </p>
+              <button type="button" aria-label="Open popup form" data-micromodal-trigger="form-popup" class="button">
+                get care
+              </button>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="200" class="hero__image">
+              <img src="/public/images/hero-circle.webp" alt="#" />
+            </div>
+            <div data-aos="fade-up" data-aos-delay="200" class="hero__image-mobile">
+              <img src="/public/images/hero-circle.webp" alt="#" />
+            </div>
+          </div>
+        </section>
+
+        <section class="services">
+          <div class="services__container container-base">
+            <h2 class="services__title">Services</h2>
+            <div class="services__list">
+              <div class="services__item service">
+                <img class="service__image" src="/images/image (1).webp" alt="Personal Care" title="Personal Care" />
+                <div class="service__content">
+                  <h3>Companionship and Home Helper</h3>
+                  <p>
+                    Our caregivers provide warm and friendly companionship to help alleviate loneliness and foster
+                    meaningful connections. Whether it’s enjoying a favorite hobby together, engaging in conversations,
+                    or assisting with day-to-day tasks, we’re here to help.
+                  </p>
+                </div>
+              </div>
+              <div class="services__item service">
+                <img class="service__image" src="/images/image (1).webp" alt="Personal Care" title="Personal Care" />
+                <div class="service__content">
+                  <h3>Companionship and Home Helper</h3>
+                  <p>
+                    Our caregivers provide warm and friendly companionship to help alleviate loneliness and foster
+                    meaningful connections. Whether it’s enjoying a favorite hobby together, engaging in conversations,
+                    or assisting with day-to-day tasks, we’re here to help.
+                  </p>
+                </div>
+              </div>
+              <div class="services__item service">
+                <img class="service__image" src="/images/image (1).webp" alt="Personal Care" title="Personal Care" />
+                <div class="service__content">
+                  <h3>Companionship and Home Helper</h3>
+                  <p>
+                    Our caregivers provide warm and friendly companionship to help alleviate loneliness and foster
+                    meaningful connections. Whether it’s enjoying a favorite hobby together, engaging in conversations,
+                    or assisting with day-to-day tasks, we’re here to help.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="simple-cta">
+          <div data-aos="fade-up" class="simple-cta__container container-base">
+            <div class="simple-cta__inner">
+              <p class="simple-cta__text">
+                Whether for yourself or a loved one, our dedicated team is here to ensure comfort, safety, and
+                independence.
+              </p>
+              <a href="#" class="button button_white">call us</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="testimonials">
+          <div class="testimonials__container container-base">
+            <h2 data-aos="fade-up" class="testimonials__title">Testimonials</h2>
+            <div data-aos="fade-up" data-aos-delay="200" class="testimonials__content">
+              <div id="testimonials-slider" class="testimonials__outer swiper">
+                <div class="testimonials__items swiper-wrapper">
+                  <div class="testimonials__item testimonial swiper-slide">
+                    <img
+                      src="/public/images/stars.svg"
+                      alt="5 star rating"
+                      title="5 star rating"
+                      class="testimonial__rating"
+                    />
+                    <p class="testimonial__text">
+                      Caring with Integrity helped my mom stay at home with dignity. Their team is amazing!
+                    </p>
+                    <p class="testimonial__author">Sarah K.</p>
+                  </div>
+                  <div class="testimonials__item testimonial swiper-slide">
+                    <img
+                      src="/public/images/stars.svg"
+                      alt="5 star rating"
+                      title="5 star rating"
+                      class="testimonial__rating"
+                    />
+                    <p class="testimonial__text">
+                      Rorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum,
+                      ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+                      inceptos himenaeos.
+                    </p>
+                    <p class="testimonial__author">John P.</p>
+                  </div>
+                  <div class="testimonials__item testimonial swiper-slide">
+                    <img
+                      src="/public/images/stars.svg"
+                      alt="5 star rating"
+                      title="5 star rating"
+                      class="testimonial__rating"
+                    />
+                    <p class="testimonial__text">
+                      Rorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum,
+                      ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+                      inceptos himenaeos.
+                    </p>
+                    <p class="testimonial__author">John P.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="testimonials__navigation slider-navigation">
+                <button class="testimonials__prev-button slider-navigation-prev" type="button">
+                  <span class="circle-button"></span>
+                </button>
+                <div class="testimonials__pagination pagination"></div>
+                <button class="testimonials__next-button slider-navigation-next" type="button">
+                  <span class="circle-button"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      {{> modal}} {{> footer-bg}}
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.js"></script>
+    <script type="module" src="../src/scripts/main.ts" defer></script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+@use "../helpers" as *;
+
+.services {
+  padding: fluid(0, 88) 0 fluid(40, 88) 0;
+  &__container {
+  }
+  &__title {
+  }
+  &__list {
+  }
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: fluid(24, 60);
+    }
+  }
+}
+
+.service {
+  padding: fluid(16, 40);
+  border-radius: rem(20);
+  border: rem(1) solid var(--color-accent);
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  gap: rem(24) fluid(20, 60);
+  @include medium {
+    grid-template-columns: 1fr;
+  }
+  &__image {
+  }
+  &__content {
+    font-size: fluid(20, 24);
+    h3 {
+      font-family: var(--font-family-base);
+      font-size: fluid(28, 32);
+      color: var(--color-accent);
+      font-weight: 500;
+      margin-bottom: fluid(16, 24);
+    }
+    
+  }
+}
