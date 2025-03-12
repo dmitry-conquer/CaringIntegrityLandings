@@ -33,7 +33,7 @@
     border-radius: 13px;
   }
   &__content {
-    padding: rem(78) fluid(32, 70) rem(30) fluid(32, 70);
+    padding: rem(60) fluid(32, 60) rem(30) fluid(32, 60);
     background-color: var(--color-light-overlay);
     border-radius: 13px;
     transition: opacity 0.3s ease;
@@ -44,9 +44,9 @@
     }
   }
   &__title {
-    margin-bottom: fluid(16, 35);
+    margin-bottom: 0;
     text-align: center;
-    font-size: fluid(40, 64);
+    font-size: fluid(36, 52);
     color: var(--color-dark);
     &::after {
       display: none;

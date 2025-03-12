@@ -139,7 +139,11 @@
     position: relative;
     padding: rem(32) 0 rem(30);
     font-size: rem(16);
-    text-align: center;
+    @include medium {
+      p {
+        text-align: center;
+      }
+    }
 
     &::after {
       content: "";

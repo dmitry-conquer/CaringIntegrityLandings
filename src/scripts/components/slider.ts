@@ -37,6 +37,10 @@ class Sliders {
       options: {
         speed: 1200,
         spaceBetweem: 20,
+        autoplay: {
+          delay: 2500, 
+          disableOnInteraction: false
+        },
         pagination: {
           el: ".services-slider__pagination",
           clickable: true,

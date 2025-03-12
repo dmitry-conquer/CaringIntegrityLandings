@@ -1,13 +1,7 @@
 @use "../helpers" as *;
 
 .services {
-  padding: fluid(0, 88) 0 fluid(40, 88) 0;
-  &__container {
-  }
-  &__title {
-  }
-  &__list {
-  }
+  padding: fluid(40, 88) 0;
   &__item {
     &:not(:last-child) {
       margin-bottom: fluid(24, 60);

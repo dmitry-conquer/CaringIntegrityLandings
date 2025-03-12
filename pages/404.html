@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sample Page</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      {{> header}}
+      <main>
+        <div class="not-found">
+          <div class="not-found__container container-base" style="background-image: url(&quot;/images/404.webp&quot;)">
+              <div class="not-found__content">
+                <h1>404</h1>
+                <h2>Page not found</h2>
+                <p>We couldn’t find the page you were looking for.</p>
+                <a href="/" class="button button_white">Return Home</a>
+              </div>
+          </div>
+        </div>
+      </main>
+      {{> modal}} {{> footer}}
+    </div>
+    <script type="module" src="../src/scripts/main.ts" defer></script>
+  </body>
+</html>
