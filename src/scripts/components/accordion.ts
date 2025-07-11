@@ -1,6 +1,8 @@
+const rootSelector = "[data-js-accordion]";
+
 class Accordion {
   private readonly selectors: Record<string, string> = {
-    root: "[data-js-accordion]",
+    root: rootSelector,
     trigger: "[data-js-accordion-trigger]",
   };
   private readonly states: Record<string, string> = {
@@ -8,13 +10,14 @@ class Accordion {
   };
   private rootElement: HTMLElement | null;
   private accordionTriggers: Element[] = [];
-  constructor() {
-    this.rootElement = document.querySelector(this.selectors.root);
+  constructor(rootElement: HTMLElement) {
+    this.rootElement = rootElement;
     if (this.rootElement) {
       this.accordionTriggers = [...this.rootElement.querySelectorAll(this.selectors.trigger)];
     }
+    this.init();
   }
-  public init() {
+  private init() {
     if (this.accordionTriggers.length <= 0) {
       return;
     }
@@ -33,11 +36,24 @@ class Accordion {
         const currentContent = el.nextElementSibling as HTMLElement;
         currentContent.style.maxHeight = "";
         el.classList.remove(this.states.isActive);
+        el.setAttribute("aria-expanded", "false");
+        el.parentElement?.classList.remove(this.states.isActive);
       }
     });
     content.style.maxHeight = content.style.maxHeight === "" ? `${content.scrollHeight}px` : "";
     trigger.classList.toggle(this.states.isActive);
+    trigger.parentElement?.classList.toggle(this.states.isActive);
+    trigger.setAttribute("aria-expanded", trigger.classList.contains(this.states.isActive) ? "true" : "false");
   }
 }
 
-export default Accordion;
+class AccordionCollection {
+  constructor() {
+    const collection = document.querySelectorAll(rootSelector);
+    collection.forEach(el => {
+      new Accordion(el as HTMLElement);
+    });
+  }
+}
+
+export default AccordionCollection;

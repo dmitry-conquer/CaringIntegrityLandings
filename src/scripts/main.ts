@@ -4,7 +4,7 @@ declare const cwi: {
 
 import "../styles/main.scss";
 import Header from "./components/header";
-import Accordion from "./components/accordion";
+import AccordionCollection from "./components/accordion";
 import Sliders from "./components/slider";
 import InitModals from "./components/modal";
 import Aos from "aos";
@@ -16,8 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const header = new Header();
   header.init();
 
-  const accordion = new Accordion();
-  accordion.init();
+  new AccordionCollection();
 
   new Sliders();
   new ToTopButton();

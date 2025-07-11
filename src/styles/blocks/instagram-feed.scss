@@ -1,0 +1,17 @@
+@use "../helpers" as *;
+
+.instagram-feed {
+  padding: rem(40) 0;
+
+  &__container {
+  }
+
+  &__body {
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: center;
+    margin-top: fluid(16, 60);
+  }
+}

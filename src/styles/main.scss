@@ -26,5 +26,8 @@
 @use "./blocks/to-top-button";
 @use "./blocks/button-cta";
 @use "./blocks/blog-section";
+@use "./blocks/faq";
+@use "./blocks/google-testimonials";
+@use "./blocks/instagram-feed";
 
 @import "/node_modules/aos/dist/aos.css";
