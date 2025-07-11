@@ -15,6 +15,7 @@
   }
 
   &__slide {
+    height: auto;
     display: flex;
     flex-direction: column;
     row-gap: rem(24);
@@ -34,9 +35,13 @@
   }
 
   &__slide-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
   }
 
   &__slide-title {
+    flex-grow: 1;
     color: #1b0126;
     font-size: rem(24);
     font-weight: 700;
@@ -61,7 +66,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    column-gap: rem(20);
+    column-gap: rem(10);
   }
 
   &__slide-link {
@@ -100,9 +105,25 @@
     display: flex;
     justify-content: center;
     margin-top: fluid(16, 60);
+    column-gap: rem(30);
+
+    @include large {
+      justify-content: space-between;
+    }
+
+    button {
+      flex-shrink: 0;
+      &.swiper-button-disabled {
+        opacity: 0.3;
+      }
+      .circle-button {
+        border: rem(1) solid var(--color-accent);
+      }
+    }
   }
 
   &__prev-button {
+    transform: rotate(180deg);
   }
 
   &__all-posts {

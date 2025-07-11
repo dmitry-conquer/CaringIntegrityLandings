@@ -94,11 +94,11 @@ class Sliders {
             spaceBetween: 20,
             slidesPerView: 1,
           },
-          640: {
+          768: {
             spaceBetween: 20,
             slidesPerView: 2,
           },
-          992: {
+          1200: {
             spaceBetween: 20,
             slidesPerView: 3,
           },

@@ -13,9 +13,12 @@
   text-transform: uppercase;
   transition: background-color 0.3s ease;
   text-align: center;
+  white-space: nowrap;
 
   @include x-small {
     width: 100%;
+
+    padding: rem(16) rem(20);
   }
 
   @include hover {
