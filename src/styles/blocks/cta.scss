@@ -1,8 +1,8 @@
 @use "../helpers" as *;
 
 .cta {
-  padding-top: fluid(40, 120);
-  padding-bottom: fluid(40, 100);
+  padding-top: rem(40);
+  padding-bottom: rem(40);
 
   &_landing {
     padding-top: rem(40);
@@ -59,6 +59,19 @@
       font-weight: 500;
       font-size: fluid(24, 32);
       color: var(--color-dark);
+    }
+
+    a:not([class]) {
+      text-decoration-line: underline;
+      text-decoration-style: solid;
+      text-decoration-skip-ink: auto;
+      text-decoration-thickness: auto;
+      text-underline-offset: auto;
+      text-underline-position: from-font;
+    }
+
+    a.button-cta {
+      margin-top: fluid(24, 60);
     }
   }
 }

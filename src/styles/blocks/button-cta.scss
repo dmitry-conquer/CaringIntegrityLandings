@@ -1,0 +1,24 @@
+@use "../helpers" as *;
+
+.button-cta {
+  background-color: var(--color-green);
+  padding: rem(16) rem(44);
+  border-radius: 8px;
+  border: rem(2) solid var(--color-accent);
+  display: inline-block;
+  color: #1b0126;
+  font-size: rem(18);
+  line-height: 1.33;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+  text-align: center;
+
+  @include x-small {
+    width: 100%;
+  }
+
+  @include hover {
+    background-color: var(--color-light);
+  }
+}

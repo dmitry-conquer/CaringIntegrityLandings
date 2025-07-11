@@ -38,8 +38,8 @@ class Sliders {
         speed: 1200,
         spaceBetweem: 20,
         autoplay: {
-          delay: 2500, 
-          disableOnInteraction: false
+          delay: 2500,
+          disableOnInteraction: false,
         },
         pagination: {
           el: ".services-slider__pagination",
@@ -71,6 +71,36 @@ class Sliders {
           1360: {
             spaceBetween: 20,
             slidesPerView: 4.02,
+          },
+        },
+      },
+    },
+    {
+      selector: "#blog-slider",
+      options: {
+        speed: 1200,
+        spaceBetweem: 20,
+        slidesPerView: 3,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        navigation: {
+          prevEl: ".blog-section__prev-button",
+          nextEl: ".blog-section__next-button",
+        },
+        breakpoints: {
+          0: {
+            spaceBetween: 20,
+            slidesPerView: 1,
+          },
+          640: {
+            spaceBetween: 20,
+            slidesPerView: 2,
+          },
+          992: {
+            spaceBetween: 20,
+            slidesPerView: 3,
           },
         },
       },

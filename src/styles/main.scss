@@ -24,5 +24,7 @@
 @use "./blocks/contacts";
 @use "./blocks/not-found";
 @use "./blocks/to-top-button";
+@use "./blocks/button-cta";
+@use "./blocks/blog-section";
 
 @import "/node_modules/aos/dist/aos.css";

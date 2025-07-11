@@ -1,7 +1,7 @@
 @use "../helpers" as *;
 
 .benefits {
-  padding: fluid(40, 120) 0;
+  padding: rem(40) 0;
   &__container {
     column-gap: rem(24);
     row-gap: fluid(20, 40);

@@ -194,3 +194,9 @@ h3,
 .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
   transform: translate(0, 0) !important;
 }
+
+@media (max-width: rem(1490)) {
+  br {
+    display: none !important;
+  }
+}
