@@ -4,15 +4,25 @@
   padding-top: fluid(40, 120);
   padding-bottom: fluid(40, 100);
 
+  &_landing {
+    padding-top: rem(40);
+    padding-bottom: rem(40);
+  }
+
+  &_pr {
+    .cta__image {
+      padding-right: fluid(0, 120);
+      @include x-large {
+        padding-right: 0;
+      }
+    }
+  }
   &_reverse {
     .cta__container {
       flex-direction: row-reverse;
       @include medium {
         flex-direction: column;
       }
-    }
-    .cta__image {
-      flex-grow: 1;
     }
   }
 
@@ -28,15 +38,27 @@
   }
 
   &__image {
+    flex: 1 1 rem(744);
+    @include medium {
+      flex: 0 1 auto;
+    }
     img {
       object-fit: cover;
     }
   }
 
   &__content {
-    flex: 0 1 rem(738);
+    flex: 1 1 rem(776);
     @include medium {
       flex: 0 1 auto;
+    }
+    h3 {
+      font-family: var(--font-family-base);
+      margin-top: rem(32);
+      margin-bottom: rem(16);
+      font-weight: 500;
+      font-size: fluid(24, 32);
+      color: var(--color-dark);
     }
   }
 }

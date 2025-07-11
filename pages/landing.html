@@ -8,9 +8,38 @@
   <body>
     <div class="landing">
       <div class="wrapper">
-        {{> header-absolute}}
+        {{> header-landing}}
         <main>
-          <section class="landing-hero">
+          <section class="alt-hero">
+            <div
+              class="alt-hero__container container-base"
+              style="background-image: url(&quot;/images/alt-hero.png&quot;)"
+            >
+              <div class="alt-hero__content">
+                <div class="alt-hero__content-body">
+                  <h1>
+                    <em>Compassionate Home Care</em>
+                    <br />
+                    Tailored to Your Lifestyle
+                  </h1>
+                  <p>
+                    Personalized care options through Medicaid Waiver and private-pay plans, ensuring comfort and
+                    independence at home.
+                  </p>
+                </div>
+                <button
+                  type="button"
+                  aria-label="Open form"
+                  data-micromodal-trigger="form-popup-landing"
+                  class="alt-hero__button button"
+                >
+                  Request a Free Consultation
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <!-- <section class="landing-hero">
             <div class="landing-hero__container container-base">
               <div class="landing-hero__banner">
                 <img src="/public/images/image3 1.webp" alt="Woman" />
@@ -28,9 +57,9 @@
                 </div>
               </div>
             </div>
-          </section>
+          </section> -->
 
-          <section class="cta">
+          <section class="cta cta_landing">
             <div class="cta__container container-base">
               <div class="cta__image">
                 <img src="/public/images/imgs.webp" alt="Personal Care" />
@@ -51,7 +80,31 @@
             </div>
           </section>
 
-          <section class="testimonials">
+          <section class="cta cta_landing cta_reverse cta_pr">
+            <div class="cta__container container-base">
+              <div class="cta__image">
+                <img src="/public/images/imgs.webp" alt="Personal Care" />
+              </div>
+              <div class="cta__content section-content">
+                <h2>
+                  <em>Empowering Independence<br /> </em>Through Compassionate Care
+                </h2>
+                <p>
+                  At Caring with Integrity Home Care, we believe that everyone deserves to live with dignity,
+                  independence, and comfort — especially in the place they feel safest: their own home. With years of
+                  experience in the home care industry, we are proud to provide exceptional, personalized care services
+                  to individuals and families in need.
+                </p>
+                <h3 style="text-align: center">Our Mission</h3>
+                <p>
+                  To empower families by delivering compassionate, professional care that enhances the quality of life
+                  for our clients while supporting their independence and well-being.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section class="testimonials testimonials_landing">
             <div class="testimonials__container container-base">
               <h2 class="testimonials__title">Testimonials</h2>
               <div class="testimonials__content">
@@ -115,7 +168,7 @@
             </div>
           </section>
         </main>
-        {{> footer-landing}}
+        {{> footer-landing}} {{> modal-landing}}
       </div>
     </div>
     <script type="module" src="../src/scripts/main.ts" defer></script>

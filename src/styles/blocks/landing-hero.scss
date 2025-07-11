@@ -1,7 +1,7 @@
 @use "../helpers" as *;
 
 .landing-hero {
-  padding-bottom: fluid(40, 80);
+  padding-bottom: rem(40);
 
   &__container {
     position: relative;

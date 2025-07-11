@@ -3,6 +3,10 @@
 .testimonials {
   padding: fluid(40, 120) 0;
 
+  &_landing {
+    padding: rem(40) 0;
+  }
+
   &__container {
   }
   &__title {
