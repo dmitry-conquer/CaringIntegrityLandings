@@ -24,7 +24,7 @@
     }
   }
   a.button {
-    max-width: rem(284);
+    max-width: max-content;
     width: 100%;
     @include x-small {
       max-width: 100%;
