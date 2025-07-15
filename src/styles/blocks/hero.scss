@@ -51,8 +51,10 @@
   }
   &__content {
     flex: 0 1 rem(883);
+    padding-bottom: rem(90);
     @include medium {
       flex: 0 1 auto;
+      padding-bottom: 0;
     }
     h1 {
       margin-bottom: rem(24);
