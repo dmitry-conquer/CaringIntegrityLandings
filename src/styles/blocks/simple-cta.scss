@@ -1,6 +1,7 @@
 @use "../helpers" as *;
 
 .simple-cta {
+  margin: rem(40) 0;
   &__inner {
     border-radius: 16px;
     background-color: var(--color-accent);
