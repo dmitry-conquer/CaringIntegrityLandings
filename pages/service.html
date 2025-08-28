@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.css" />
+    <title>Home Page</title>
+  </head>
+  <body id="top">
+    <div class="wrapper">
+      {{> header-absolute}}
+      <main>
+        <section class="hero hero_bg" style="background-image: url(&quot;/public/images/hero-shape.svg&quot;)">
+          <div class="hero__container container-base">
+            <div data-aos="fade-up" class="hero__content">
+              <h1><em>Senior Care Services</em> in Philadelphia, PA</h1>
+              <p>
+                As our loved ones age, it’s natural to notice them facing new challenges with everyday tasks that once
+                came easily. Simple things like managing household bills, safely handling technology to stay in touch
+                with family, or keeping up with simple home cleaning can be overwhelming for seniors.
+              </p>
+              <button type="button" aria-label="Open popup form" data-micromodal-trigger="form-popup" class="button">
+                get care
+              </button>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="200" class="hero__image">
+              <img src="/images/service/hero.png" alt="#" />
+            </div>
+            <div data-aos="fade-up" data-aos-delay="200" class="hero__image-mobile">
+              <img src="/images/service/hero.png" alt="#" />
+            </div>
+          </div>
+        </section>
+
+        <section class="cta">
+          <div class="cta__container container-base">
+            <div data-aos="fade-up" class="cta__image">
+              <img src="/images/service/1.png" alt="#" />
+            </div>
+            <div data-aos="fade-up" data-aos-delay="200" class="cta__content section-content">
+              <p>
+                When these changes begin to affect a senior's well-being or independence, professional support can make
+                a meaningful difference.
+              </p>
+              <p>
+                Caring With Integrity Home Care understands the importance of helping seniors maintain their dignity and
+                continue living comfortably in their homes. Serving the Philadelphia, PA community, our team provides
+                compassionate, personalized elder care tailored to each individual's needs. Whether helping with healthy
+                meal preparations, offering medication reminders, or providing friendly companionship, we ensure our
+                clients are well cared for.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="benefits-slider">
+          <div class="benefits-slider__container container-base">
+            <div class="benefits-slider__header">
+              <h2 class="benefits-slider__header-title">Benefits of Hiring Senior Care Services</h2>
+              <div class="benefits-slider__header-content">
+                <p>
+                  Hiring the right support for your loved one is a significant decision. At Caring With Integrity Home
+                  Care, we want to create a positive impact through our solutions.
+                </p>
+                <p>Discover the many ways our senior care solutions provide tangible benefits and peace of mind:</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <a href="#top" title="Go top" aria-label="Go top" data-js-to-top-button class="to-top-button">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+        </svg>
+      </a>
+      {{> modal}} {{> footer-bg}}
+    </div>
+    <script>
+      const acfData = {
+        smoothScroll: 1,
+      };
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.js"></script>
+    <script type="module" src="../src/scripts/main.ts" defer></script>
+  </body>
+</html>
