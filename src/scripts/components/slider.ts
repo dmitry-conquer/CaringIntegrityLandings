@@ -1,6 +1,41 @@
 class Sliders {
   private readonly sliders = [
     {
+      selector: "#service-benefits-slider",
+      options: {
+        speed: 1200,
+        pagination: {
+          el: ".service-benefits__pagination",
+          clickable: true,
+          renderBullet: function (index: number, className: string) {
+            return '<span class="' + className + '">' + (index + 1) + "</span>";
+          },
+        },
+        navigation: {
+          prevEl: ".service-benefits__navigation-button--prev",
+          nextEl: ".service-benefits__navigation-button--next",
+        },
+        breakpoints: {
+          0: {
+            spaceBetween: 16,
+            slidesPerView: 1,
+          },
+          640: {
+            spaceBetween: 16,
+            slidesPerView: 2,
+          },
+          992: {
+            spaceBetween: 20,
+            slidesPerView: 3,
+          },
+          1200: {
+            spaceBetween: 32,
+            slidesPerView: 3.5,
+          },
+        },
+      },
+    },
+    {
       selector: "#testimonials-slider",
       options: {
         speed: 1200,

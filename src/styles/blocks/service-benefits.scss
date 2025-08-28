@@ -1,0 +1,132 @@
+@use "../helpers" as *;
+
+.service-benefits {
+  padding: rem(40) 0 fluid(40, 80) 0;
+
+  &__container {
+    padding-left: calc((100vw - 1840px) / 2);
+
+    @media (max-width: rem(1200)) {
+       padding-inline: rem(20);
+    }
+  }
+
+  &__header {
+    max-width: rem(1240);
+    padding-inline: rem(20);
+    margin: 0 auto;
+    margin-bottom: fluid(36, 75);
+  }
+
+  &__header-title {
+  }
+
+  &__header-text {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: rem(16);
+  }
+
+  &__slider {
+    overflow: hidden;
+    padding-bottom: rem(3);
+  }
+
+  &__slider-wrapper {
+  }
+
+  &__slider-item {
+  }
+
+  &__footer {
+    margin-top: rem(24);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline: rem(20);
+    column-gap: rem(8);
+  }
+
+  &__navigation-button {
+    flex-shrink: 0;
+    width: rem(50);
+    height: rem(50);
+    border: rem(1) solid var(--color-accent);
+    border-radius: 50%;
+    background-color: var(--color-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+
+    svg {
+      color: var(--color-accent);
+      transition: all 0.2s ease;
+    }
+
+    @include hover {
+      background-color: var(--color-accent);
+      svg {
+        color: var(--color-light);
+      }
+    }
+
+    &.swiper-button-disabled {
+      opacity: 0.3;
+      pointer-events: none;
+    }
+
+    &--prev {
+    }
+    &--next {
+    }
+  }
+
+  &__pagination {
+    display: flex;
+    align-items: center;
+    width: auto !important;
+    .swiper-pagination-bullet {
+      width: fluid(20, 40) !important;
+      height: fluid(20, 40) !important;
+      text-align: center;
+      color: #A9A9BC !important;
+      opacity: 1;
+      background-color: transparent !important;
+      border: 0 !important;
+      border-radius: unset !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: rem(16) !important;
+    }
+
+    .swiper-pagination-bullet-active {
+      color: var(--color-dark) !important;
+      border: 0 !important;
+    }
+   
+  }
+
+}
+
+.service-benefits-slide {
+  border-radius: 40px 0 0 0;
+  border: 1px solid rgba(101, 0, 143, 0.25);
+  background: var(--color-light);
+  padding: rem(24) rem(18) rem(24) rem(40);
+
+  &__title {
+    font-family: var(--font-family-base);
+    font-size: rem(24);
+    font-weight: 500;
+    line-height: 1.3;
+    margin-bottom: rem(16);
+    color: var(--color-dark);
+  }
+
+  &__text {
+    font-size: fluid(16, 20);
+  }
+}
