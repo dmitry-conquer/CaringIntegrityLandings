@@ -54,7 +54,7 @@
         </section>
 
         <section class="service-benefits">
-          <div class="service-benefits__container ">
+          <div class="service-benefits__container">
             <div class="service-benefits__header">
               <h2 class="service-benefits__header-title">Benefits of Hiring Senior Care Services</h2>
               <div class="service-benefits__header-text">
@@ -62,7 +62,10 @@
                   Hiring the right support for your loved one is a significant decision. At Caring With Integrity Home
                   Care, we want to create a positive impact through our solutions.
                 </p>
-                <p>Discover the many ways our senior care solutions provide tangible benefits <br> and peace of mind:</p>
+                <p>
+                  Discover the many ways our senior care solutions provide tangible benefits <br />
+                  and peace of mind:
+                </p>
               </div>
             </div>
             <div class="service-benefits__slider swiper-slider" id="service-benefits-slider">
@@ -160,6 +163,95 @@
             </div>
           </div>
         </section>
+
+        <section class="tabs" data-js-tabs>
+          <div class="tabs__container container-base">
+            <div class="tabs__header">
+              <h2 class="tabs__header-title">
+                Understanding How Our Caregivers Provide <br />
+                Reliable Elderly Care
+              </h2>
+              <div class="tabs__header-text">
+                <p>
+                  Reliable care means more than assistance to us; it's about understanding, empathy, and truly enriching
+                  each day for our clients. Here's how our senior caregivers can make a big difference in the lives of
+                  each client we serve:
+                </p>
+              </div>
+            </div>
+            <div class="tabs__body">
+              <div class="tabs__buttons">
+                <div class="tabs__buttons-item">
+                  <button
+                    class="tabs__button is-active"
+                    type="button"
+                    data-js-tabs-button
+                    id="tab-1"
+                    role="tab"
+                    aria-controls="tabpanel-1"
+                    aria-selected="true"
+                    tabindex="0"
+                  >
+                    Companionship and Home Helper
+                  </button>
+                  <div class="tabs__buttons-container" id="tab-container-1"></div>
+                </div>
+                <div class="tabs__buttons-item">
+                  <button
+                    class="tabs__button"
+                    type="button"
+                    data-js-tabs-button
+                    id="tab-2"
+                    role="tab"
+                    aria-controls="tabpanel-2"
+                    aria-selected="true"
+                    tabindex="0"
+                  >
+                  Transporting Clients to Social Activities and Doctor's Appointments
+                  </button>
+                  <div class="tabs__buttons-container" id="tab-container-2"></div>
+                </div>
+              </div>
+              <div class="tabs__panels">
+                <div
+                  data-adaptive-dom="tab-container-1,1199.98,first"
+                  data-js-tabs-content
+                  class="tabs__panel is-active"
+                  id="tabpanel-1"
+                  role="tabpanel"
+                  aria-labelledby="tab-1"
+                >
+                  <img src="/images/service/t1.png" alt="" class="tabs__panel-image" />
+                  <div class="tabs__panel-content">
+                    <div class="tabs__panel-content-inner">
+                      <p>
+                        Our team knows that emotional well-being is just as important as physical health. Our caregivers
+                        offer warm companionship, striking up meaningful conversations, sharing hobbies, or providing a
+                        comforting presence during quiet moments. Beyond friendship, we help with daily activities like
+                        organizing personal items, managing household paperwork, and assisting with small tasks that
+                        make life easier. We aim to reduce loneliness, create trust, and foster a sense of connection
+                        for every client we serve.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div data-adaptive-dom="tab-container-2,1199.98,first" data-js-tabs-content class="tabs__panel" id="tabpanel-2" role="tabpanel" aria-labelledby="tab-2">
+                  <img src="/images/service/t2.png" alt="" class="tabs__panel-image" />
+                  <div class="tabs__panel-content">
+                    <div class="tabs__panel-content-inner">
+                      <p>
+                        Nutrition and mealtimes are at the heart of good health. Our caregivers work alongside seniors
+                        and their families to plan balanced, delicious meals that reflect dietary needs, personal
+                        preferences, and any medical restrictions. We meticulously shop for fresh ingredients, prepare
+                        meals in a clean kitchen, and serve food with warmth and attention.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
       <a href="#top" title="Go top" aria-label="Go top" data-js-to-top-button class="to-top-button">
         <svg
@@ -175,7 +267,7 @@
       {{> modal}} {{> footer-bg}}
     </div>
     <script>
-      const acfData = {
+      const cwi = {
         smoothScroll: 1,
       };
     </script>

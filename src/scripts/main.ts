@@ -11,8 +11,11 @@ import Aos from "aos";
 import { clickOutside } from "./functions";
 import Lenis from "lenis";
 import ToTopButton from "./components/to-top-button";
+import Tabs from "./components/tabs";
+import AdaptiveDOM from "./AdaptiveDOM";
 
 document.addEventListener("DOMContentLoaded", () => {
+  new AdaptiveDOM();
   const header = new Header();
   header.init();
 
@@ -20,9 +23,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   new Sliders();
   new ToTopButton();
+  new Tabs();
   InitModals();
   clickOutside();
-
   Aos.init({
     once: true,
     duration: 600,
