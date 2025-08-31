@@ -1,0 +1,49 @@
+@use "../helpers" as *;
+
+.grid {
+  padding-block: fluid(40, 80);
+
+  &__container {
+  }
+
+  &__header {
+  }
+
+  &__header-title {
+  }
+
+  &__header-text {
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(rem(440), 1fr));
+    gap: rem(20);
+
+    @include small {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    padding: rem(24);
+    border-radius: rem(20);
+    border: 1px solid rgba(101, 0, 143, 0.25);
+    background: var(--color-light);
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(16);
+
+    &-title {
+      color: var(--color-dark);
+      font-family: var(--font-family-base);
+      font-size: rem(24);
+      font-weight: 500;
+      line-height: 1.3;
+    }
+
+    &-text {
+      font-size: rem(20);
+    }
+  }
+}

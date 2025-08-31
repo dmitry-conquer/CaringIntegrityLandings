@@ -130,6 +130,21 @@ h3,
   }
 }
 
+.section-header {
+  max-width: rem(1240);
+  padding-inline: rem(20);
+  margin: 0 auto;
+  margin-bottom: fluid(36, 75);
+  &__title {
+  }
+  &__text {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: rem(16);
+  }
+}
+
 .section-content {
   flex-grow: 1;
 

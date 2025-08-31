@@ -7,25 +7,8 @@
     padding-left: calc((100vw - 1840px) / 2);
 
     @media (max-width: rem(1200)) {
-       padding-inline: rem(20);
+      padding-inline: rem(20);
     }
-  }
-
-  &__header {
-    max-width: rem(1240);
-    padding-inline: rem(20);
-    margin: 0 auto;
-    margin-bottom: fluid(36, 75);
-  }
-
-  &__header-title {
-  }
-
-  &__header-text {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    gap: rem(16);
   }
 
   &__slider {
@@ -91,7 +74,7 @@
       width: fluid(20, 40) !important;
       height: fluid(20, 40) !important;
       text-align: center;
-      color: #A9A9BC !important;
+      color: #a9a9bc !important;
       opacity: 1;
       background-color: transparent !important;
       border: 0 !important;
@@ -106,9 +89,7 @@
       color: var(--color-dark) !important;
       border: 0 !important;
     }
-   
   }
-
 }
 
 .service-benefits-slide {

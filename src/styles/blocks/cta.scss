@@ -73,5 +73,12 @@
     a.button-cta {
       margin-top: fluid(24, 60);
     }
+
+    p:not(:last-child) {
+      margin-bottom: rem(16);
+    }
+    p:has(a) {
+      margin-top: rem(24);
+    }
   }
 }
