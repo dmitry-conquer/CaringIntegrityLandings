@@ -28,7 +28,7 @@
 
   &__container {
     display: flex;
-    column-gap: fluid(30, 90);
+    column-gap: fluid(30, 170);
     align-items: center;
     @include medium {
       align-items: stretch;
@@ -48,9 +48,16 @@
   }
 
   &__content {
-    flex: 1 1 rem(776);
+    flex: 0 1 rem(740);
     @include medium {
       flex: 0 1 auto;
+    }
+
+    &--increase {
+      flex: 0 1 rem(893);
+      @include medium {
+        flex: 0 1 auto;
+      }
     }
     h3 {
       font-family: var(--font-family-base);

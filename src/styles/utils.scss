@@ -11,3 +11,13 @@
   white-space: nowrap;
   border-width: 0;
 }
+
+.section-pt {
+  padding-top: fluid(40, 80) !important;
+}
+.section-pb {
+  padding-bottom: fluid(40, 80) !important;
+}
+.section-p {
+  padding-block: fluid(40, 80) !important;
+}
