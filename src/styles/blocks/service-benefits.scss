@@ -3,7 +3,6 @@
 .service-benefits {
   padding: rem(40) 0 fluid(40, 80) 0;
   position: relative;
-  z-index: -1;
 
   &::after {
     content: "";
