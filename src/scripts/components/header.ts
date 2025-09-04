@@ -14,12 +14,10 @@ export class Header {
   private rootElement: HTMLElement | null;
   private overlayElement: HTMLElement | null;
   private triggerButtonElement: HTMLElement | null;
-  private menuLinksElements: NodeListOf<Element> | [];
   constructor() {
     this.rootElement = document.querySelector(this.selectors.root);
     this.overlayElement = this.rootElement?.querySelector(this.selectors.overlay) || null;
     this.triggerButtonElement = this.rootElement?.querySelector(this.selectors.triggerButton) || null;
-    this.menuLinksElements = this.rootElement?.querySelectorAll(this.selectors.menuLinks) || [];
   }
 
   public init(): void {
@@ -34,22 +32,6 @@ export class Header {
 
   private bindEvents(): void {
     this.triggerButtonElement?.addEventListener("click", this.onTriggerButtonClick);
-    this.toggleMenuItems();
-  }
-
-  private toggleMenuItems(): void {
-    this.menuLinksElements.forEach(link => {
-      link.addEventListener("click", e => {
-        e.stopPropagation();
-        e.preventDefault();
-        this.menuLinksElements.forEach(i => {
-          if (i !== link) {
-            i.classList.remove("is-active");
-          }
-        });
-        link?.classList.toggle("is-active");
-      });
-    });
   }
 }
 
