@@ -166,13 +166,22 @@
     &.current-menu-item {
       text-decoration: underline;
       text-underline-offset: rem(6);
-      pointer-events: none;
       @include large {
         text-decoration: none;
       }
     }
     &.menu-item-has-children {
-      &:hover {
+      
+      @include hover {
+        &::after {
+          transform: rotate(-180deg);
+        }
+        .header__menu-sublist {
+          @include show;
+        }
+      }
+
+      &.is-active {
         &::after {
           transform: rotate(-180deg);
         }
@@ -222,6 +231,8 @@
   }
   &__menu-subitem {
     padding: 2px 0;
+    line-height: 1;
+    padding: 0;
   }
   &__menu-sublink {
     transition: opacity 0.3s ease;
